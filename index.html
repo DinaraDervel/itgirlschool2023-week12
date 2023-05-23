@@ -12,23 +12,27 @@
     <div class="page">
       <form class="form">
         <h2>Add your comment</h2>
-        <input type="text" id="name" placeholder="Enter your name" />
-        <input type="url" id="picture" placeholder="Enter your avatar link" />
+        <input type="text" id="name" placeholder="Enter your name" required />
+        <input
+          type="url"
+          id="picture"
+          placeholder="Enter your avatar link"
+          required
+        />
         <textarea
           name="comment"
           id="comment"
           cols="30"
           rows="10"
           placeholder="Enter your comment"
+          required
         ></textarea>
-        <button type="button" onclick="calcSquareOfNumber();">Send</button>
+        <button type="button" onclick="postComment();">Post</button>
       </form>
-      <div class="form">
+      <div class="form" id="chat">
         <h2>Chat</h2>
-        <img src="" alt="" />
-        <p></p>
-        <p></p>
       </div>
     </div>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>

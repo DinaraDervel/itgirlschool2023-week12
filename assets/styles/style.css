@@ -4,6 +4,7 @@ h1 {
 }
 .page {
   display: flex;
+  flex-wrap: wrap;
 }
 .form {
   flex-basis: 50%;
