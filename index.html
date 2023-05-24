@@ -10,7 +10,7 @@
   <body>
     <h1>Comments service with spam filter</h1>
     <div class="page">
-      <form class="form">
+      <form class="form" id="form">
         <h2>Add your comment</h2>
         <input type="text" id="name" placeholder="Enter your name" required />
         <input
@@ -27,7 +27,7 @@
           placeholder="Enter your comment"
           required
         ></textarea>
-        <button type="button" onclick="postComment();">Post</button>
+        <input type="submit" value="Post" />
       </form>
       <div class="form" id="chat">
         <h2>Chat</h2>
