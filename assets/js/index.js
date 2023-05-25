@@ -12,7 +12,7 @@ form.addEventListener('submit', function (evt) {
     const link = document.querySelector('#picture').value;
     //get value of textarea with comment and check it for spam
     let comment = document.querySelector('#comment').value;
-    //comment = checkSpam(comment);
+    comment = checkSpam(comment);
 
     //create div 'card' - container for comment, and add it to chat
     const card = document.createElement('div');
@@ -46,5 +46,9 @@ function checkName(str) {
 }
 
 function checkSpam(str) {
-
+    while (str.match(/viagra/i) !== null || str.match(/xxx/i) !== null) {
+        str = str.replace(/viagra/i, '***');
+        str = str.replace(/xxx/i, '***');
+    }
+    return str;
 }
