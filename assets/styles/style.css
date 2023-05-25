@@ -7,11 +7,10 @@ h1 {
   flex-wrap: wrap;
 }
 .form {
-  flex-basis: 50%;
   position: relative;
   z-index: 1;
   background: #ffffff;
-  max-width: 360px;
+  max-width: 500px;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
@@ -47,6 +46,24 @@ h1 {
 .form input[type="submit"]:active,
 .form input[type="submit"]:focus {
   background: #43a047;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  align-items: center;
+  gap: 20px;
+}
+.card__name {
+  flex-basis: 50%;
+}
+.card__img {
+  width: 100px;
+  max-width: 100%;
+}
+.card__comment {
+  flex-basis: 90%;
 }
 
 body {
