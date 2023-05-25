@@ -46,9 +46,9 @@ function checkName(str) {
 }
 
 function checkSpam(str) {
-    while (str.match(/viagra/i) !== null || str.match(/xxx/i) !== null) {
-        str = str.replace(/viagra/i, '***');
-        str = str.replace(/xxx/i, '***');
-    }
+    const spam1 = /viagra/ig;
+    const spam2 = /xxx/ig;
+    str = str.replace(spam1, '***');
+    str = str.replace(spam2, '***');
     return str;
 }

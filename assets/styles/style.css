@@ -57,14 +57,15 @@ h1 {
   gap: 20px;
 }
 .card__name {
-  flex-basis: 50%;
+  flex-basis: 30%;
+  font-weight: bolder;
 }
 .card__img {
-  width: 100px;
+  width: 50px;
   max-width: 100%;
 }
 .card__comment {
-  flex-basis: 90%;
+  flex-basis: 100%;
 }
 
 body {
