@@ -5,12 +5,14 @@ form.addEventListener('submit', function (evt) {
     // cancel default behavior
     evt.preventDefault();
 
-    //get value of input with name
-    const name = document.querySelector('#name').value;
+    //get value of input with name and check its spelling
+    let name = document.querySelector('#name').value;
+    name = checkName(name);
     //get value of input with url
     const link = document.querySelector('#picture').value;
-    //get value of textarea with comment
-    const comment = document.querySelector('#comment').value;
+    //get value of textarea with comment and check it for spam
+    let comment = document.querySelector('#comment').value;
+    //comment = checkSpam(comment);
 
     //create div 'card' - container for comment, and add it to chat
     const card = document.createElement('div');
@@ -35,3 +37,14 @@ form.addEventListener('submit', function (evt) {
     //add created elements inside div 'card'
     card.append(img, paragraphWithName, paragraphWithComment);
 });
+
+function checkName(str) {
+    let name = str.toLowerCase();
+    const firstLetter = name[0].toUpperCase();
+    name = firstLetter + name.slice(1);
+    return name;
+}
+
+function checkSpam(str) {
+
+}
