@@ -36,6 +36,9 @@ form.addEventListener('submit', function (evt) {
 
     //add created elements inside div 'card'
     card.append(img, paragraphWithName, paragraphWithComment);
+
+    //restore form elements default values
+    form.reset();
 });
 
 function checkName(str) {
@@ -46,9 +49,5 @@ function checkName(str) {
 }
 
 function checkSpam(str) {
-    const spam1 = /viagra/ig;
-    const spam2 = /xxx/ig;
-    str = str.replace(spam1, '***');
-    str = str.replace(spam2, '***');
-    return str;
+    return str.replace(/viagra|xxx/ig, '***');
 }
