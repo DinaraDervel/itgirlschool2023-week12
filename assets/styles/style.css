@@ -58,11 +58,17 @@ h1 {
   flex-wrap: wrap;
   text-align: left;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
 }
 .card__name {
   flex-basis: 30%;
   font-weight: bolder;
+}
+.card__date {
+  flex-basis: 30%;
+  font-style: italic;
+  font-size: smaller;
 }
 .card__img {
   width: 50px;

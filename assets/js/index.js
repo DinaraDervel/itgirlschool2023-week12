@@ -34,8 +34,13 @@ form.addEventListener('submit', function (evt) {
     paragraphWithComment.innerHTML = comment;
     paragraphWithComment.className = 'card__comment';
 
+    //create element paragraph for date and time
+    const paragraphWithDate = document.createElement('p');
+    paragraphWithDate.innerHTML = parseDate(new Date());
+    paragraphWithDate.className = 'card__date';
+
     //add created elements inside div 'card'
-    card.append(img, paragraphWithName, paragraphWithComment);
+    card.append(img, paragraphWithName, paragraphWithDate, paragraphWithComment);
 
     //restore form elements default values
     form.reset();
@@ -50,4 +55,71 @@ function checkName(str) {
 
 function checkSpam(str) {
     return str.replace(/viagra|xxx/ig, '***');
+}
+
+function parseDate(newDate) {
+    let day = '';
+    switch (newDate.getDay()) {
+        case 0:
+            day = 'Sun';
+            break;
+        case 1:
+            day = 'Mon';
+            break;
+        case 2:
+            day = 'Tue';
+            break;
+        case 3:
+            day = 'Wen';
+            break;
+        case 4:
+            day = 'Thu';
+            break;
+        case 5:
+            day = 'Fri';
+            break;
+        case 6:
+            day = 'Sat';
+            break;
+    }
+    let month = '';
+    switch (newDate.getMonth()) {
+        case 0:
+            month = 'January';
+            break;
+        case 1:
+            month = 'February';
+            break;
+        case 2:
+            month = 'March';
+            break;
+        case 3:
+            month = 'April';
+            break;
+        case 4:
+            month = 'May';
+            break;
+        case 5:
+            month = 'June';
+            break;
+        case 6:
+            month = 'July';
+            break;
+        case 7:
+            month = 'August';
+            break;
+        case 8:
+            month = 'September';
+            break;
+        case 9:
+            month = 'October';
+            break;
+        case 10:
+            month = 'November';
+            break;
+        case 11:
+            month = 'December';
+            break;
+    }
+    return `${day}, ${newDate.getDate()} ${month} ${newDate.getFullYear()} at ${newDate.getHours()}:${newDate.getMinutes()}:${newDate.getSeconds()}`;
 }
