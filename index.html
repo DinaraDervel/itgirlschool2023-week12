@@ -15,7 +15,14 @@
         <fieldset class="fieldset">
           <legend>Show your name?</legend>
           <div>
-            <input type="radio" id="yes" name="showName" value="yes" required />
+            <input
+              type="radio"
+              id="yes"
+              name="showName"
+              value="yes"
+              required
+              checked
+            />
             <label for="yes">Yes</label>
           </div>
           <div>
@@ -24,12 +31,7 @@
           </div>
         </fieldset>
         <input type="text" id="name" placeholder="Enter your name" />
-        <input
-          type="url"
-          id="picture"
-          placeholder="Enter your avatar link"
-          required
-        />
+        <input type="url" id="picture" placeholder="Enter your avatar link" />
         <textarea
           name="comment"
           id="comment"

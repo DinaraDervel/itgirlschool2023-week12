@@ -38,7 +38,7 @@ form.addEventListener('submit', function (evt) {
 
     //create element img
     const img = document.createElement('img');
-    img.src = link;
+    img.src = link ? link : `assets\\images\\image${Math.ceil(Math.random() * 5)}.jpeg`;
     img.className = 'card__img';
 
     //create element paragraph
@@ -56,6 +56,7 @@ form.addEventListener('submit', function (evt) {
 
     //restore form elements default values
     form.reset();
+    nameInput.style.visibility = 'visible';
 });
 
 function checkName(str) {
