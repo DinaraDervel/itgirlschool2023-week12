@@ -17,6 +17,12 @@ h1 {
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+.fieldset {
+  display: flex;
+  text-align: left;
+  border: 1px solid #5bc161;
+  margin-bottom: 15px;
+}
 #chat {
   max-height: 500px;
   overflow-y: scroll;
@@ -32,6 +38,10 @@ h1 {
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
+}
+.form input[type="radio"] {
+  width: fit-content;
+  margin-left: 15px;
 }
 .form input[type="submit"] {
   font-family: "Roboto", sans-serif;

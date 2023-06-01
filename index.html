@@ -12,7 +12,18 @@
     <div class="page">
       <form class="form" id="form">
         <h2>Add your comment</h2>
-        <input type="text" id="name" placeholder="Enter your name" required />
+        <fieldset class="fieldset">
+          <legend>Show your name?</legend>
+          <div>
+            <input type="radio" id="yes" name="showName" value="yes" />
+            <label for="yes">Yes</label>
+          </div>
+          <div>
+            <input type="radio" id="no" name="showName" value="no" />
+            <label for="no">No</label>
+          </div>
+        </fieldset>
+        <input type="text" id="name" placeholder="Enter your name" />
         <input
           type="url"
           id="picture"

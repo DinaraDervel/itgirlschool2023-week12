@@ -81,6 +81,8 @@ function parseDate(newDate) {
         case 6:
             day = 'Sat';
             break;
+        default:
+            day = 'unknown';
     }
     let month = '';
     switch (newDate.getMonth()) {
@@ -120,6 +122,8 @@ function parseDate(newDate) {
         case 11:
             month = 'December';
             break;
+        default:
+            month = 'unknown';
     }
     return `${day}, ${newDate.getDate()} ${month} ${newDate.getFullYear()} at ${newDate.getHours()}:${newDate.getMinutes()}:${newDate.getSeconds()}`;
 }
