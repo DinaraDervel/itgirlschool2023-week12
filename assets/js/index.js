@@ -18,7 +18,7 @@ form.addEventListener('submit', function (evt) {
     evt.preventDefault();
 
     //get value of input with name and check its spelling
-    let name = document.querySelector('#name').value;
+    let name = nameInput.value;
     name = name ? checkName(name) : 'Username';
     //get value of input with url
     const link = document.querySelector('#picture').value;
@@ -60,9 +60,13 @@ form.addEventListener('submit', function (evt) {
 });
 
 function checkName(str) {
-    let name = str.toLowerCase();
-    const firstLetter = name[0].toUpperCase();
-    name = firstLetter + name.slice(1);
+    let name = (str.toLowerCase()).split(' ');
+    for (let i = 0; i < name.length; i++) {
+        name[i] = name[i].replaceAll(' ', '');
+        const firstLetter = name[i] ? name[i][0].toUpperCase() : '';
+        name[i] = firstLetter + name[i].slice(1);
+    }
+    name = name.join(' ');
     return name;
 }
 
