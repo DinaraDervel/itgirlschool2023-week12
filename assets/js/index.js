@@ -1,5 +1,17 @@
 const form = document.querySelector('#form');
 const chat = document.querySelector('#chat');
+const nameInput = document.querySelector('#name');
+const nameShowYes = document.querySelector('#yes');
+const nameShowNo = document.querySelector('#no');
+
+nameShowYes.addEventListener('change', () => {
+    nameInput.style.visibility = 'visible';
+});
+
+nameShowNo.addEventListener('change', () => {
+    nameInput.style.visibility = 'hidden';
+    nameInput.value = '';
+});
 
 form.addEventListener('submit', function (evt) {
     // cancel default behavior
@@ -7,7 +19,7 @@ form.addEventListener('submit', function (evt) {
 
     //get value of input with name and check its spelling
     let name = document.querySelector('#name').value;
-    name = checkName(name);
+    name = name ? checkName(name) : 'Username';
     //get value of input with url
     const link = document.querySelector('#picture').value;
     //get value of textarea with comment and check it for spam
